@@ -292,13 +292,16 @@ if (quotationForm) {
             return;
         }
 
-        // Format the message for WhatsApp
+        // Format the message for WhatsApp (includes customer's contact info)
         const message = `Hi Amit,
 
 I would like to get a quotation for a project.
 
-*Project Details:*
+*Customer Details:*
 Name: ${name}
+WhatsApp: ${whatsapp}
+
+*Project Details:*
 Service: ${service}
 Description: ${description}
 Budget: ${budget}
@@ -310,9 +313,9 @@ Thank you!`;
 
         // Create WhatsApp URL (encode the message)
         const encodedMessage = encodeURIComponent(message);
-        // Remove any non-numeric characters from WhatsApp number except the + sign
-        const cleanWhatsapp = whatsapp.replace(/[^\d+]/g, '');
-        const whatsappURL = `https://wa.me/${cleanWhatsapp}?text=${encodedMessage}`;
+        // YOUR WhatsApp number (where all messages will be sent)
+        const yourWhatsAppNumber = '919748317810';
+        const whatsappURL = `https://wa.me/${yourWhatsAppNumber}?text=${encodedMessage}`;
 
         // Open WhatsApp in new tab
         window.open(whatsappURL, '_blank');
