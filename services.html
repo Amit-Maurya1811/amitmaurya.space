@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Services by Amit Maurya - CAD Design, IoT Projects, PCB Design">
+    <title>Services | Amit Maurya</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Amit Maurya</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <h1 class="page-title">My Services</h1>
+            <p class="page-subtitle">Expert solutions for your projects and ideas</p>
+
+            <!-- Services Grid -->
+            <div class="services-grid">
+                <!-- Service 1: 3D CAD Design -->
+                <div class="service-card" data-service="3d-cad">
+                    <div class="service-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3>3D CAD Design</h3>
+                    <p>Professional 3D modeling and CAD design for mechanical parts, assemblies, and technical drawings using industry-standard tools.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> 3D Modeling</li>
+                        <li><i class="fas fa-check"></i> Technical Drawings</li>
+                        <li><i class="fas fa-check"></i> Assembly Design</li>
+                        <li><i class="fas fa-check"></i> Rendering</li>
+                    </ul>
+                    <a href="#quotation-form" class="btn btn-primary" onclick="setService('3D CAD Design')">Get Quote</a>
+                </div>
+
+                <!-- Service 2: IoT Project Development -->
+                <div class="service-card" data-service="iot">
+                    <div class="service-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>IoT Project Development</h3>
+                    <p>End-to-end Internet of Things solutions including hardware integration, firmware development, and cloud connectivity.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Hardware Setup</li>
+                        <li><i class="fas fa-check"></i> Firmware Development</li>
+                        <li><i class="fas fa-check"></i> Cloud Integration</li>
+                        <li><i class="fas fa-check"></i> Mobile Apps</li>
+                    </ul>
+                    <a href="#quotation-form" class="btn btn-primary" onclick="setService('IoT Project Development')">Get Quote</a>
+                </div>
+
+                <!-- Service 3: PCB Design / Prototyping -->
+                <div class="service-card" data-service="pcb">
+                    <div class="service-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>PCB Design & Prototyping</h3>
+                    <p>Complete PCB design, layout, and prototyping services for electronic projects and product development.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Schematic Design</li>
+                        <li><i class="fas fa-check"></i> PCB Layout</li>
+                        <li><i class="fas fa-check"></i> Prototyping</li>
+                        <li><i class="fas fa-check"></i> Testing & Debugging</li>
+                    </ul>
+                    <a href="#quotation-form" class="btn btn-primary" onclick="setService('PCB Design / Prototyping')">Get Quote</a>
+                </div>
+
+                <!-- Service 4: Academic / Custom Projects -->
+                <div class="service-card" data-service="academic">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Academic & Custom Projects</h3>
+                    <p>Customized solutions for academic projects, thesis work, and unique client requirements across various domains.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Project Development</li>
+                        <li><i class="fas fa-check"></i> Technical Documentation</li>
+                        <li><i class="fas fa-check"></i> Consultation</li>
+                        <li><i class="fas fa-check"></i> Support & Training</li>
+                    </ul>
+                    <a href="#quotation-form" class="btn btn-primary" onclick="setService('Academic / Custom Projects')">Get Quote</a>
+                </div>
+            </div>
+
+            <!-- Why Choose Me Section -->
+            <div class="why-choose-section">
+                <h2 class="section-title">Why Choose My Services?</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <i class="fas fa-award"></i>
+                        <h3>Professional Quality</h3>
+                        <p>High-quality deliverables meeting industry standards</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Timely Delivery</h3>
+                        <p>Punctual project completion as per agreed timeline</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-user"></i>
+                        <h3>Personal Support</h3>
+                        <p>Direct communication and ongoing support throughout</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-dollar-sign"></i>
+                        <h3>Affordable Pricing</h3>
+                        <p>Competitive rates without compromising quality</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quotation Form Section -->
+            <div class="quotation-section" id="quotation-form">
+                <div class="quotation-container">
+                    <h2>Get a Quick Quote</h2>
+                    <p>Fill the form below and I'll send you a WhatsApp message with the details</p>
+
+                    <form class="quotation-form" id="quotationForm">
+                        <div class="form-group">
+                            <label for="quote-name">Your Name *</label>
+                            <input type="text" id="quote-name" name="name" required placeholder="Enter your name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="quote-whatsapp">WhatsApp Number *</label>
+                            <input type="tel" id="quote-whatsapp" name="whatsapp" required placeholder="e.g., +91 98765 43210">
+                            <small>Include country code (e.g., +91 for India)</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="quote-service">Service Type *</label>
+                            <select id="quote-service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option value="3D CAD Design">3D CAD Design</option>
+                                <option value="IoT Project Development">IoT Project Development</option>
+                                <option value="PCB Design / Prototyping">PCB Design / Prototyping</option>
+                                <option value="Academic / Custom Projects">Academic / Custom Projects</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="quote-description">Project Description *</label>
+                            <textarea id="quote-description" name="description" rows="5" required placeholder="Tell me about your project..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="quote-budget">Budget (Optional)</label>
+                            <input type="text" id="quote-budget" name="budget" placeholder="e.g., 5000-10000 or flexible">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="quote-deadline">Deadline *</label>
+                            <input type="text" id="quote-deadline" name="deadline" required placeholder="e.g., 1 week, 2 months">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Send via WhatsApp</span>
+                        </button>
+
+                        <p class="form-note">
+                            <i class="fas fa-info-circle"></i>
+                            Clicking submit will open WhatsApp with your pre-filled message
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Amit Maurya. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

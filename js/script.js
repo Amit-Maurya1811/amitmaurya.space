@@ -261,6 +261,68 @@ if (contactForm) {
 }
 
 // ================================
+// WhatsApp Quotation Form
+// ================================
+function setService(serviceName) {
+    const serviceSelect = document.getElementById('quote-service');
+    if (serviceSelect) {
+        serviceSelect.value = serviceName;
+        // Smooth scroll to form
+        document.getElementById('quotation-form').scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+const quotationForm = document.getElementById('quotationForm');
+
+if (quotationForm) {
+    quotationForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // Get form data
+        const name = document.getElementById('quote-name').value.trim();
+        const whatsapp = document.getElementById('quote-whatsapp').value.trim();
+        const service = document.getElementById('quote-service').value;
+        const description = document.getElementById('quote-description').value.trim();
+        const budget = document.getElementById('quote-budget').value.trim() || 'Not mentioned';
+        const deadline = document.getElementById('quote-deadline').value.trim();
+
+        // Validate phone number (basic validation)
+        if (whatsapp.length < 10) {
+            alert('Please enter a valid WhatsApp number');
+            return;
+        }
+
+        // Format the message for WhatsApp
+        const message = `Hi Amit,
+
+I would like to get a quotation for a project.
+
+*Project Details:*
+Name: ${name}
+Service: ${service}
+Description: ${description}
+Budget: ${budget}
+Deadline: ${deadline}
+
+Please provide me with a quotation for this project.
+
+Thank you!`;
+
+        // Create WhatsApp URL (encode the message)
+        const encodedMessage = encodeURIComponent(message);
+        // Remove any non-numeric characters from WhatsApp number except the + sign
+        const cleanWhatsapp = whatsapp.replace(/[^\d+]/g, '');
+        const whatsappURL = `https://wa.me/${cleanWhatsapp}?text=${encodedMessage}`;
+
+        // Open WhatsApp in new tab
+        window.open(whatsappURL, '_blank');
+
+        // Reset form
+        quotationForm.reset();
+    });
+}
+
+// ================================
 // Console Message
 // ================================
 console.log('%c👋 Welcome to My Portfolio!', 'color: #6366f1; font-size: 20px; font-weight: bold;');
