@@ -314,7 +314,7 @@ Thank you!`;
         // Create WhatsApp URL (encode the message)
         const encodedMessage = encodeURIComponent(message);
         // YOUR WhatsApp number (where all messages will be sent)
-        const yourWhatsAppNumber = '919748317810';
+        const yourWhatsAppNumber = '9748317810';
         const whatsappURL = `https://wa.me/${yourWhatsAppNumber}?text=${encodedMessage}`;
 
         // Open WhatsApp in new tab
